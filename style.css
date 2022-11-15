@@ -15,3 +15,65 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.fact-container {
+    width: auto;
+    max-width: 900px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.fact-text {
+    font-size: 2.75rem;
+}
+
+.fact-text-long {
+    font-size: 2rem;
+}
+
+.fa-quote-left {
+    font-size: 4rem;
+}
+
+.button-container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: end;
+}
+
+button {
+    margin-left: 5px;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+button:hover {
+    background-color: orange;
+}
+
+button:active {
+    transform: translate(0, 0.3rem);
+}
+
+.twitter-button {
+    color: #38a1f3;
+}
+
+.twitter-button:hover {
+    color: #1795f8;
+}
+
+@media screen and (max-width: 1000px) {
+    .fact-container {
+        margin: auto 10px;
+    }
+    .fact-text {
+        font-size: 2.5rem;
+    }
+}

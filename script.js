@@ -2,8 +2,20 @@ const catFactContainer = document.getElementById('fact-container');
 const catFactText = document.getElementById('fact');
 const twitterBtn = document.getElementById('twitter');
 const newCatFactBtn = document.getElementById('new-fact');
+const loader = document.getElementById('loader');
+
+function showLoader() {
+    loader.hidden = false;
+    catFactContainer.hidden = true;
+}
+
+function hideLoader() {
+    loader.hidden = true;
+    catFactContainer.hidden = false;
+}
 
 async function fetchCatFact() {
+    showLoader();
     const apiUrl = 'https://catfact.ninja/fact';
         try {
             const res = await fetch(apiUrl);
@@ -14,6 +26,7 @@ async function fetchCatFact() {
                 catFactText.classList.remove('fact-text-long')
             }
             catFactText.textContent = dataCat.fact;
+            hideLoader();
         } catch (e) {
             console.log(e)
         }
